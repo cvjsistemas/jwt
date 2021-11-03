@@ -14,6 +14,10 @@ const getdashboard =(req,res)=>{
     res.render('index',{user:req.user});
 }
 
+const getmanuals =(req,res)=>{
+    res.render('manuals',{user:req.user});
+}
+
 
 const getregister =(req, res)=>{
     res.render('register');
@@ -372,6 +376,7 @@ const updatenewpass = async(req, res)=>{
 module.exports ={
     getlogin,
     getdashboard,
+    getmanuals,
     getregister,
     register,
     login,
