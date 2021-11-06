@@ -2,3 +2,82 @@
 .btn-bd-primary{font-weight:600;color:#fff;background-color:#7952b3;border-color:#7952b3}
 .btn-bd-primary:hover,.btn-bd-primary:active{color:#fff;background-color:#61428f;border-color:#61428f}
 .btn-bd-primary:focus{box-shadow:0 0 0 3px rgba(121,82,179,0.25)}
+
+
+
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+  .bg-info {
+ /* background-color: #121F3D!important;*/
+  background-color: #24385b!important;
+
+  }
+
+
+  .navbar-brand {
+
+  background-color: #333333 !important;
+
+}
+
+.navbar-nav .nav-link {
+  padding-right: 10px;
+  padding-left: 0;
+  font-weight: bold;
+  color: #FFFFFF !important;
+}
+
+.oculto{
+    display: none;
+}
+
+.fa{
+    padding-right:10px;
+}
+
+
+
+
+
+  @media (max-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+
+    span.navbar-toggler-icon{
+      display: block;
+    }
+
+    .navbar-nav{
+      display: none;
+    }
+
+    .nav-link{
+      font-size: 50px;
+      text-align: center;
+      border: 1px solid black;
+      background-color: #24385b;
+    }
+
+    .pt-3 {
+      padding-top: 0rem!important;
+    }
+
+    
+.oculto{
+    display: block;
+}
+
+
+
+
+ 
+   
+  }
+

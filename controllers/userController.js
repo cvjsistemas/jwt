@@ -15,9 +15,11 @@ const getadmin =(req,res)=>{
         }
     });*/
 
-    //const logeado = req.session.id;
+    //const logeadoid = req.session.id;
+    //const logeadouser = req.session.user;
 
-    //console.log(logeado);
+    //console.log(logeadoid);
+    //console.log(logeadouser);
     //return;
 
 
@@ -43,7 +45,8 @@ const create = (req,res)=>{
 
    const id =req.session.idusuario;
    const user =req.session.user;
-  // console.log(id);
+  //console.log(id);
+  //console.log(user);
    //return;
 
     conexion.query('SELECT * FROM roles',(error,results)=>{

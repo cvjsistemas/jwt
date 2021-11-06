@@ -94,6 +94,8 @@ const login =async(req, res)=>{
                     const id = results[0].id;
                     const user=results[0].user;
                     //console.log(id);
+                   //console.log(user);
+                    
                     //return;
                     const token =jwt.sign({id:id},process.env.JWT_SECRETO,{
                         expiresIn: process.env.JWT_TIEMPO_EXPIRA
