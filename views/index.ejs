@@ -56,7 +56,7 @@
               <!--<span data-feather="shopping-cart"></span>-->
               Logout
             </a>
-          </li>
+        </li>
           <!-- <li class="nav-item">
             <a class="nav-link" href="#">
               <span data-feather="users"></span>
@@ -77,12 +77,15 @@
           </li>-->
         </ul>
       </div>
+      <div class="divlogo">
+        <img src="img/draeger_logo_transparente.png" class="imglogo" alt="">
+      </div>
     </nav>
 
     <!-- Contenido principal   -->
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h2> Dashboard</h2>
+        <h2 class="ocultomovil"> Dashboard</h2>
         <h2>Bienvenido:
           <% if (user) { %>
             <span class="badge bg-success"><%= user.name %></span>
