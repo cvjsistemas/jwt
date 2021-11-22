@@ -43,7 +43,9 @@ const authorization = (req, res, next) => {
            })
            } catch {
              //return res.sendStatus(403).send('aqui no pasas');
-             return res.sendStatus(403);
+             //return res.sendStatus(403);SI EL TOKEN EXPIRA REDIRIGE AL LOGIN
+             res.status(201).render('login', { alert : 'unauthorized' } );
+          
            }
 
 
