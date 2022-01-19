@@ -2,6 +2,10 @@ require('dotenv').config(); //inicia el paquete de dotenvPath
 
 const express = require('express');
 
+const https = require('https');
+const path= require('path');
+const fs = require('fs');
+
 const cookieParser = require("cookie-parser");
 
 const PORT = process.env.PORT ||3000;
@@ -34,6 +38,16 @@ app.use(function(req, res, next) {
     next();
 });
 
-app.listen(PORT,()=>{
+const sslServer = https.createServer({
+    key:fs.readFileSync(path.join(__dirname, 'certs','key.pem')),
+    cert:fs.readFileSync(path.join(__dirname, 'certs','cert.pem')),
+},app);
+
+
+sslServer.listen(3443,()=>{
+    console.log("secure server in port 3443");
+})
+
+/*app.listen(PORT,()=>{
     console.log(`Servidor UP en el puerto: ${PORT}`);
-});
+});*/
