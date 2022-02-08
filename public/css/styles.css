@@ -56,8 +56,13 @@
     height:50px;
 }
 
+.card{
+  text-align:justify;
+}
 
-
+.accordion-body{
+  text-align:justify;
+}
 
   @media (max-width: 768px) {
     .bd-placeholder-img-lg {
