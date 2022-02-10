@@ -18,6 +18,10 @@ const getmanuals =(req,res)=>{
     res.render('manuals',{user:req.user});
 }
 
+const getmantes =(req,res)=>{
+    res.render('mantes',{user:req.user});
+}
+
 
 const getregister =(req, res)=>{
     res.render('register');
@@ -379,6 +383,7 @@ module.exports ={
     getlogin,
     getdashboard,
     getmanuals,
+    getmantes,
     getregister,
     register,
     login,

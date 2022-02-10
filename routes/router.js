@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const {getlogin,getdashboard,getmanuals,getforgotpass,getcreatenewpass,login,logout,forgotpass,updatenewpass} = require('../controllers/authController');
+const {getlogin,getdashboard,getmanuals,getmantes,getforgotpass,getcreatenewpass,login,logout,forgotpass,updatenewpass} = require('../controllers/authController');
 const {getadmin,data,create,save,edit,update,delet} = require('../controllers/userController');
 
 const {sendemail} = require('../controllers/emailController');
@@ -23,6 +23,7 @@ const authrol = require('../middleware/rol');
 //LOGIN
 router.get('/dashboard',authorization,getdashboard);
 router.get('/manuales',authorization,getmanuals);
+router.get('/mnts',authorization,getmantes);
 router.get('/login',getlogin);
 //router.get('/register',getregister);
 //router.post('/register',register);
