@@ -23,7 +23,7 @@ const authrol = require('../middleware/rol');
 //LOGIN
 router.get('/dashboard',authorization,getdashboard);
 router.get('/manuales',authorization,getmanuals);
-router.get('/mnts',authorization,getmantes);
+router.get('/mantes',authorization,getmantes);
 router.get('/login',getlogin);
 //router.get('/register',getregister);
 //router.post('/register',register);

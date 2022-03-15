@@ -39,13 +39,17 @@ app.use(function(req, res, next) {
 });
 
 const sslServer = https.createServer({
-    key:fs.readFileSync(path.join(__dirname, 'certs','key.pem')),
-    cert:fs.readFileSync(path.join(__dirname, 'certs','cert.pem')),
+    key:fs.readFileSync(path.join(__dirname, 'certs','cert_5049_key.pem')),
+    cert:fs.readFileSync(path.join(__dirname, 'certs','www_draegerbot_com.crt')),
+    ca:[
+        fs.readFileSync(path.join(__dirname, 'certs','ca_root.crt')),
+        fs.readFileSync(path.join(__dirname, 'certs','ca_bundle_certificate.crt'))
+    ]
 },app);
 
 
-sslServer.listen(3443,()=>{
-    console.log("secure server in port 3443");
+sslServer.listen(8443,()=>{
+    console.log("secure server in port 8443");
 })
 
 /*app.listen(PORT,()=>{
