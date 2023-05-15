@@ -269,18 +269,19 @@ const forgotpass = (req, res)=>{
                                 //return;
                                const transporter = nodemailer.createTransport({
                                     //service: 'Gmail',
-                                    host:'smtp.gmail.com',
-                                    port: 587,
-                                    secure: false, 
+                                    host:process.env.EMAIL_HOST,
+                                    port: process.env.EMAIL_PORT,
+                                    //secure: false, 
                                     auth: {
-                                        type:'login',
+                                       // type:'login',
                                         user: process.env.EMAIL_ACCOUNT,
                                         pass: process.env.EMAIL_PASS
+                                    }
                                     }
                                 });
                             // Definimos el email
                             const mailOptions = {
-                                from: 'draeger.peru.vr@gmail.com',
+                                 from: process.env.EMAIL_ACCOUNT,
                             // to: 'draegeraduanas@gmail.com',
                                 to: `${email}`,
                                 subject: 'Password Reset',
